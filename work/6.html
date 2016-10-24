@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>untitled</title>
+<meta charset="utf-8" />
+<style type="text/css">
+*{margin: 0;padding: 0;list-style:none;}
+ul{width: 400px;margin: 10px auto;}
+li{float: left;margin-right: 10px;opacity:0.3;filter:alpha(opacity:30);}
+.bool1 { position:absolute; top:450px; left:300px; }
+.bool2 { position:absolute; top:330px; left:400px; }
+.bool3 { position:absolute; top:230px; left:500px; }
+.bool4 { position:absolute; top:150px; left:600px; }
+.bool5 { position:absolute; top:80px; left:700px; }
+.bool6 { position:absolute; top:350px; left:800px; }
+.bool7 { position:absolute; top:450px; left:900px; }
+img{width: 100px;height: 100px; }
+#div1{position: absolute;top: 0;width: 100px;opacity: 0.7;margin: 10px auto;color: white;border-radius: 50%;background: teal;height: 100px;text-align: center;line-height: 100px;font-size: 20px;}
+body{background: url(img/bk.gif);}
+</style>
+<script src="js/s.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+	var aLi=document.getElementsByTagName('li');
+
+	for(var i=0,len=aLi.length;i<len;i++){
+		aLi[i].style.position='absolute';
+		toss(aLi[i]); 
+	}
+};
+
+</script>
+</head>
+<body style="overflow-x:hidden;overflow-y;">
+<div id="div1">投掷地球</div>
+<ul>
+	<li class="bool1"><img src="img/bool.png"></li>
+	<li class="bool2"><img src="img/bool.png"></li>
+	<li class="bool3"><img src="img/bool.png"></li>
+	<li class="bool4"><img src="img/bool.png"></li>
+	<li class="bool5"><img src="img/bool.png"></li>
+	<li class="bool6"><img src="img/bool.png"></li>
+	<li class="bool7"><img src="img/bool.png"></li>
+</ul>
+</body>
+</html>
+<!-- // function getStyle(obj,name){
+// 	return window.getComputedStyle?getComputedStyle(obj,false)[name]:obj.currentStyle[name];
+// }
+// var aPos=[];
+	// for(var i=0,len=aLi.length;i<len;i++){
+	// 	console.log(aLi[i].offsetLeft,aLi[i].offsetTop);
+	// 	// aPos.push({left:getStyle(aLi[i],'left'),top:getStyle(aLi[i],'top')});
+	// 	aLi[i].style.left=aLi[i].offsetLeft+'px';
+	// 	aLi[i].style.top=aLi[i].offsetTop+'px';
+	// }	 -->

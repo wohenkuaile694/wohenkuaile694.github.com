@@ -1,62 +1,216 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="author" content="智能社 - zhinengshe.com" />
-<meta name="copyright" content="智能社 - zhinengshe.com" />
-<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
-<title>智能社— http://www.zhinengshe.com</title>
-<style>
-*{margin:0; padding:0;}
-.box{width:400px; height:300px; border:1px solid #000;  position:absolute; top:50%; left:50%; margin-left:-200px; margin-top:-150px; text-align:center; line-height:300px; font-size:30px; display:none;}
+<title>CHR</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="skin.css">
+<link rel="stylesheet" type="text/css" href="pub.css">
+<script src="pub.js"></script>
+<script src="sq.js"></script>
+<style type="text/css">
+.weather{
+	position: absolute;top: 0;right: 100px;overflow: hidden;
+	width: 500px;height: 100px;
+}
+.weather li,.weather li img{
+	float: left;
+	width: 60px;height: 60px;border-radius: 50%;margin-top: 10px;margin-right: 16px;
+}
+.weather li{
+	opacity: 0;
+}
 </style>
-<script>
-window.onload=function(){
-	var oBox = document.querySelector('.box');
-	oBox.ondragenter = function(){
-		oBox.innerHTML = '释放鼠标';
-	};
-	oBox.ondragleave = function(){
-		oBox.innerHTML = '请将文件拖放到此处';
-	};
-	oBox.ondragover = function(){
-		return false;
-	};
-	
-	oBox.ondrop = function(){
-		alert('放下啦');
-		return false;
-	};
-	
-	var timer = null;
-	document.ondragover=function(){
-		oBox.style.display='block';
-		clearTimeout(timer);
-		timer = setTimeout(function(){
-			oBox.style.display='none';
-		},300);
-	};
-	
-	/*document.ondragenter=function(){
-		oBox.style.display='block';
-	};
-	document.ondragleave=function(){
-		oBox.style.display='none';
-	};*/
-};
+<script type="text/javascript">
+S(function(){
+	S.fn.nav();
+	S.fn.work();
+	S.fn.check();
+	S.fn.home();
+	window.onresize=S.fn.nav;
+});
 </script>
 </head>
+<body style="overflow-x:hidden;overflow-y:hidden;">
+<div id="header">
 
-<body>
-<div class="box">请将文件拖放到此处</div>
+                        <!--最高的错觉-->
+	<div class="logo"><img src="4.png" /></div>
+	<div class="stage">
+		<div class="wrap">
+			<div class="d1">Arts</div>
+			<div class="d2">Works</div>
+			<div class="d3">Contact</div>
+			<div class="d4 active">Home</div>
+			<div class="d5">Story</div>
+		</div>
+	</div>
+</div>
+<div class="content">
+	<ul class="all">
+		<li class="c1">
+			<div class="home1">
+				<div class="h1"><img src="works/cat.jpg" class="face">
+					<img src="works/name.png" class="words">
+					         <!--真实的错觉-->
+					<img src="works/true.png" class="true">
+				</div>
+				<ul class="weather">
+					<li><img src="works/w0.jpg"></li>
+					<li><img src="works/w1.jpg"></li>
+					<li><img src="works/w2.jpg"></li>
+					<li><img src="works/w3.jpg"></li>
+					<li><img src="works/w4.jpg"></li>
+				</ul>
+				<div class="mid"></div>
+				<div class="h2">
+					<span class="t2"></span>
+					<p>HTML/CSS</p>
+					<span class="b2"></span>
+				</div>
+				<div class="h3">
+					<span class="t1"></span>
+					<p>JavaScript</p>
+					<span class="b1"></span>
+				</div>
+				<div class="css3">
+					<span class="t3"></span>
+					<p>JQuery</p>
+					<span class="b3"></span>
+				</div>
+				<div class="h5">
+					<span class="t5"></span>
+					<p>HTML5/CSS3</p>
+					<span class="b5"></span>
+				</div>
+			</div>
+		</li>
+		<li class="c2">
+			<div class="item2">
+				<span class="thread">
+
+				</span>
+				<div class="left2">
+					<h2>
+						<em>2014/03-2015/05</em>
+						<span>Developer</span>
+					</h2>
+					<p>
+						<strong>页面的开发和调试</strong>
+						<span>派得伟业科技发展有限公司</span>
+					</p>
+				</div>
+				<div class="right2">
+					<h2>
+						<em>2015/05-2016/08</em>
+						<span>Developer</span>
+					</h2>
+					<p>
+						<strong>H5页面的开发和调试</strong>
+						<span>指尖互娱科技有限公司</span>
+					</p>
+				</div>
+			</div>
+		</li>
+		<li class="c3">3
+		  	<ul class="item4">
+		  		<li>
+		  			<span>HTML+CSS</span>
+		  			<div class="base">
+		  				<div class="s1"></div>
+		  			</div>
+		  		</li>
+		  		<li>
+		  			<span>JavaScript</span>
+		  			<div class="base">
+		  				<div class="s2"></div>
+		  			</div>
+		  		</li>
+		  		<li>
+		  			<span>HTML5+CSS3</span>
+		  			<div class="base">
+		  				<div class="s3"></div>
+		  			</div>
+		  		</li>
+		  		<li>
+		  			<span>JQuery</span>
+		  			<div class="base">
+		  				<div class="s4"></div>
+		  			</div>
+		  		</li>
+		  	</ul>
+		</li>
+		<li class="c4">4
+			<ul class="item4 clearfix">
+					<li class="work">
+						<a href="work/1.html" target="_blank">
+							<img src="works/1.png"><span></span>
+						</a>
+					</li>
+					<li class="work">
+						<a href="work/2.html" target="_blank">
+							<img src="works/2.png"><span></span>
+						</a>
+					</li>
+					<li class="work">
+						<a href="work/3.html" target="_blank">
+							<img src="works/3.png"><span></span>
+						</a>
+					</li>
+					<li class="work">
+						<a href="work/4.html" target="_blank">
+							<img src="works/4.png"><span></span>
+						</a>
+					</li>
+					<li class="work">
+						<a href="work/5.html" target="_blank">
+							<img src="works/5.png"><span></span>
+						</a>
+					</li>
+					<li class="work">
+						<a href="work/6.html" target="_blank">
+							<img src="works/6.png"><span></span>
+						</a>
+					</li>
+					<li class="work">
+						<a href="work/7.html" target="_blank">
+							<img src="works/7.png"><span></span>
+						</a>
+					</li>
+					<li class="work">
+						<a href="work/8.html" target="_blank">
+							<img src="works/8.png"><span></span>
+						</a>
+					</li>
+			</ul>
+		</li>
+		<li class="c5">
+				<div id="wrap5">
+					<ul id="pack5">
+						<li>
+							<img src="imgs/bk1.jpg">
+							<span class="info5">
+								QQ:908028018
+							</span>
+						</li>
+						<li>
+							<img src="imgs/bk2.jpg">
+							<span class="info5">
+								TEL:13693337162
+							</span>
+						</li>
+						<li>
+							<img src="imgs/bk3.jpg">
+							<span class="info5">
+								E-mail:13766177292.163
+							</span>
+						</li>
+					</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+<div id="footer">
+<img src="imgs/author.png" class="author">
+</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-

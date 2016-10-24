@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>untitled</title>
+<meta charset="utf-8" />
+<style type="text/css">
+*{margin: 0;padding: 0;}
+li{list-style:none;}
+body{font-size: 12px;font-family: Tahoma;color: #333;background: black;}
+.stage{
+	width: 300px;height: 186px;
+	-webkit-perspective:2000px;
+	margin: 30px auto;
+/*	-webkit-transform-style:preserve-3d;*/
+}
+.pack{
+	-webkit-transform-style:preserve-3d;
+	-webkit-transition:all 1s ease-in-out;
+}
+.u,.r,.d,.l{
+	position: absolute;
+	width: 300px;height: 300px;
+}
+.u{
+	-webkit-transform: translateZ(150px);
+}
+.r{
+	-webkit-transform:rotateY(90deg) translateZ(150px);
+/*	-webkit-transform:translateZ(88px);*/
+}
+.d{
+	-webkit-transform:rotateY(180deg) translateZ(150px);
+/*	-webkit-transform:translateZ(88px);*/
+}
+.l{
+	-webkit-transform:rotateY(270deg) translateZ(150px);
+/*	-webkit-transform:translateZ(88px);*/
+}
+/*.pack:hover{
+	-webkit-transform:rotateY(90deg);
+
+}*/
+.stage li{
+	float: left;
+	width: 15px;height: 15px;margin-right: 10px;
+	background: white;
+	-webkit-border-radius:50%;
+	opacity: 0.7;
+
+}
+.stage ul{
+	position: absolute;
+	left: 50%;margin-left: -40px;
+	bottom: -100px;
+	-webkit-transform:translateZ(150px);
+}
+.stage .active{
+	background: darkred;
+}
+</style>
+<script src=""></script>
+<script type="text/javascript">
+window.onload=function(){
+	var stage=getByClass(document,'stage')[0];
+	var pack=getByClass(stage,'pack')[0];
+	var imgs=pack.getElementsByTagName('img');
+	var lis=stage.getElementsByTagName('li');
+
+	for(var i=0,len=imgs.length;i<len;i++){
+		(function(i){
+			lis[i].onmouseover=function(){
+				for(var j=0,max=lis.length;j<max;j++){
+					lis[j].className='';
+				}
+				pack.style.webkitTransform='rotateY('+(-90*i)+'deg)';
+				this.className='active';
+			};
+		})(i);
+	}
+};
+
+function getByClass(obj,name){
+	if(document.getElementsByClassName){
+		return obj.getElementsByClassName(name);
+	}else{
+		var ret=[];
+		var all=obj.getElementsByTagName('*');
+		var re=new RegExp('\\b'+name+'\\b');
+
+		for(var i=0,len=all.length;i<len;i++){
+			if(re.test(all[i].className)){
+				ret.push(all[i]);
+			}
+		}
+
+		return ret;
+	}
+}
+</script>
+</head>
+<body>
+<div class="stage">
+	<div class="pack">
+		<img src="imgs/1.jpg" class="u">
+		<img src="imgs/2.jpg" class="r">
+		<img src="imgs/3.jpg" class="d">
+		<img src="imgs/4.jpg" class="l">
+	</div>
+	<ul>
+		<li class="active"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+</body>
+</html>

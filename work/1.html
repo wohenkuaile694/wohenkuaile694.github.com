@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>灵魂回响</title>
+    <link rel="stylesheet" href="css/base1.css"/>
+    <style>
+     .nav_box{ width: 100%;
+               height: 54px;
+               background: url(img_l/nav_bg.png) repeat-x;}
+     .nav{ width: 1010px;
+           height: 50px;
+           margin: 0 auto;
+           position: relative;}
+     .nav_l a{ width: 120px;
+               height: 36px;
+               display: block;
+               background: url(img_l/bg_4.png) no-repeat -2px -5px;
+               margin-top: 6px;
+               text-indent: -999px;
+               margin-left: 18px;
+               border-right: 1px solid #cecece;}
+     .nav_r{ width: 550px;
+             height: 50px;
+             line-height: 50px;}
+     .nav_1 li, .nav_2 li{float: left;}
+     .nav_1 { width: 240px;
+              border-right: 1px solid #cecece;}
+     .nav_1 li{margin-left: 20px;}
+     .nav_1 li a{ color: #000;
+                  font-size: 12px;
+                  padding-left: 30px;
+                  position: relative;}
+     .nav_1 li i{width: 26px;
+                 height: 26px;
+                 display:inline-block;
+                 background: url(img_l/bg_2.png) no-repeat -138px 0;
+                 position: absolute;
+                 top: -4px; left: 0;
+                 transition:all 1s;}
+     .nav_1 li i:hover{transform:rotate(1800deg);}
+     .nav_1 .nv_1{ background: url(img_l/bg_2.png) no-repeat -188px 0;}
+     .nav_1 .nv_2{ background: url(img_l/bg_2.png) no-repeat 0 -103px;}
+     .nav_2 li{border-right: 1px solid #cecece;}
+     .nav_2 li a{padding: 0 26px;
+                 position: relative;}
+     .nav_2 li b{ width: 8px;
+                  height: 5px;
+                  background: url(img_l/bg_2.png) no-repeat -205px -147px;
+                  position: absolute;
+                  top:6px;right: -12px;}
+     .cont_box{ background: url(img_l/con_bg.jpg) center 0;}
+     .header{ width: 1000px;
+              height: 552px;
+              margin: 0 auto;
+              background: url(img_l/header.jpg) no-repeat;
+              position: relative;}
+     .head_l a{display: block;
+               width: 190px;
+               height: 100px;
+               background: url(img_l/logo.gif) no-repeat;
+               text-indent: -999px;}
+     .head_r{ width: 810px; }
+     .head_r li{padding: 37px 0 44px 20px;
+                float: left;
+                text-align: center;
+                font-size: 16px;
+                font-family: "微软雅黑";}
+     .head_r li a{color: #c3cff7;}
+     .head_r li span{font-size: 8px;
+                     color: #7b86b3;}
+     .header p a{ display: block;
+                  width: 36px;
+                  height: 122px;
+                  background: url(img_l/zzz.png) no-repeat;
+                  position: absolute;
+                  top: 246px; left: 0;}
+     .content{width: 1010px;
+              margin: 0 auto;
+              height: 2000px;
+              background: #1b1821;}
+     .download_l{ width: 620px;}
+     .down_lt li{float: left;}
+     .dw_1 a{display: block;
+             width: 216px;
+             height: 110px;
+             background: url(img_l/bg_3.jpg) no-repeat 0 0;}
+     .dw_2 a{ width: 100px;
+              height: 110px;
+              display: block;
+              background: url(img_l/bg_3.jpg) no-repeat -216px 0;}
+     .dw_3 a{background: url(img_l/bg_3.jpg) no-repeat -316px 0;}
+     .dw_4 a{background: url(img_l/bg_3.jpg) no-repeat -416px 0;}
+     .dw_5 a{background: url(img_l/bg_3.jpg) no-repeat -516px 0;}
+    
+     .dw_1 a:hover{background: url(img_l/bg_3.jpg) no-repeat 0 -110px;}
+     .dw_2 a:hover{background: url(img_l/bg_3.jpg) no-repeat -216px -110px;}
+     .dw_3 a:hover{background: url(img_l/bg_3.jpg) no-repeat -316px -110px;}
+     .dw_4 a:hover{background: url(img_l/bg_3.jpg) no-repeat -416px -110px;}
+     .dw_5 a:hover{background: url(img_l/bg_3.jpg) no-repeat -516px -110px;}
+     
+     .down_lb{position: relative;}
+     .down_lb div img{display: none;
+                      width: 616px;
+                      height: 314px;}
+     .down_lb ul{width: 100px;
+                 position: absolute;
+                 right:10px;bottom: 10px;}
+     .down_lb ul li{float: left;}
+     .down_lb li a{display: block;
+                   width: 16px;
+                   height: 16px;
+                   border-radius: 50px;
+                   background: #3a3e47;
+                   margin-right: 4px;}
+     .down_lb li .active{background: #d0290a;}
+     .download_r{width: 390px;}
+     .do_1{ width: 390px;
+            height: 68px;
+            background: url(img_l/sever.png) no-repeat center;
+            position: relative;}
+     .do_p{ position: absolute;
+            top:12px;left: 100px;
+            line-height: 22px;}
+     .do_p a{font-size: 14px;
+             color: #adb9e0;}
+     .do_p a span{color: #f00000;}
+     .do_2{width: 380px;
+           height: 40px;
+           background: url(img_l/bg_3.jpg) no-repeat 0 -220px;
+           border: 1px solid #433b4f;
+           border-bottom: none;
+           position: relative;}
+     .do_2 p{position: absolute;
+             top: 12px;left:6px;
+             color: #adb9e0;}
+     .do_2 p a{color: #ff3c04;
+               text-decoration: underline;}
+     .do_2 p i{ display: inline-block;
+                width: 14px;
+                height: 14px;
+                background: url(img_l/bg_3.jpg) no-repeat -603px -227px;
+                position: absolute;
+                top:0;left:156px;}
+     .do_2 p span{ font-size: 14px;
+                   padding-left: 40px;}
+     .drb_btn li{ float: left;
+                  width: 95px;
+                  height: 60px;
+                  text-align: center;
+                  background: url(img_l/bg_3.jpg)no-repeat 0 -260px;}
+     .drb_btn .dn_1{background: url(img_l/bg_3.jpg)no-repeat -95px -260px;}
+     .drb_btn .dn_2{background: url(img_l/bg_3.jpg)no-repeat -190px -260px;}
+     .drb_btn .dn_3{background: url(img_l/bg_3.jpg)no-repeat -285px -260px;}
+     .drb_btn .dbtn{background: url(img_l/bg_3.jpg)no-repeat -94px -318px;}
+     .drb_btn li a{ font-size: 14px;
+                    font-weight: bold;
+                    color: #fff;
+                    line-height: 60px;}
+     .drb_box{ width: 380px;
+               height: 254px;
+               border: 1px solid #433b4f;
+               border-top: none;
+               background: #322e3f;}
+     .drb_box div { display: none;
+                    position: relative;}
+     .drb_1{font-size: 18px;
+             color: aqua;}
+     .drb_1 h3{ width: 346px;
+                height: 34px;
+                background: url(img_l/bg_3.jpg) no-repeat 0 -377px;
+                position: absolute;
+                top:18px;left: 16px;}
+     .drb_1 h3 a{font-size: 14px;
+                 font-weight: bold;
+                 color: #db4606;
+                 position: absolute;
+                 top: 12px;left: 36px;}
+     .drb_1 .rb_1{width: 340px;
+                  position: absolute;
+                  top: 60px;left: 20px;}
+     .rb_1 li a,.rb_1 li span{ font-size: 12px;
+                               color: #9ca7ca;
+                               margin-bottom: 14px;}
+     .rb_1 li a{float: left;}
+     .rb_1 li span{float: right;}
+     .drb_1 p{position: absolute;
+              top: 214px;right: 20px;
+              width: 76px;
+              height: 14px;
+              background: url(img_l/nex_lt.png) no-repeat ;}
+     .drb_1 p a{font-size: 12px;
+                color: #9ca7ca;
+                padding-left: 18px;}
+     .banner{margin:30px 0;}
+     .banner li{float: left;
+                margin-right: 10px;}
+     .column_l{ width: 656px;
+                height: 346px;
+                border: 1px solid #433b4f;}
+     .cnl_2 img{display: none;}
+     .cnl_1 li{float: left;}
+     .cnl_1 li a{ display: block;
+                  width: 108px;
+                  height: 59px;
+                  background: url(img_l/bg_3.jpg) no-repeat 0 -412px;}
+     .cnl_1 .cl_1{width: 110px;
+                  background: url(img_l/bg_3.jpg) no-repeat -108px -412px;}
+     .cnl_1 .cl_2{width: 110px;
+                  background: url(img_l/bg_3.jpg) no-repeat -218px -412px;}
+     .cnl_1 .cl_3{width: 110px;
+                  background: url(img_l/bg_3.jpg) no-repeat -328px -412px;}
+     .cnl_1 .cl_4{width: 110px;
+                  background: url(img_l/bg_3.jpg) no-repeat -438px -412px;}
+     .cnl_1 .cl_5{width: 108px;
+                  background: url(img_l/bg_3.jpg) no-repeat -548px -412px;}
+     .cnl_1 li a:hover{background: url(img_l/bg_3.jpg) no-repeat 0 -471px;}
+     .cnl_1 .cl_1:hover{background: url(img_l/bg_3.jpg) no-repeat -109px -471px;}  
+     .cnl_1 .cl_2:hover{background: url(img_l/bg_3.jpg) no-repeat -218px -471px;}
+     .cnl_1 .cl_3:hover{background: url(img_l/bg_3.jpg) no-repeat -328px -471px;}
+     .cnl_1 .cl_4:hover{background: url(img_l/bg_3.jpg) no-repeat -438px -471px;}
+     .cnl_1 .cl_5:hover{background: url(img_l/bg_3.jpg) no-repeat -548px -471px;}
+        
+     .column_r h3{ font-size: 20px;
+                   color: #f3b464;
+                   position: relative;
+                   padding: 4px 40px;}
+     .column_r h3 i{width: 30px;
+                    height: 30px;
+                    background: url(img_l/bg_3.jpg) no-repeat -628px 0;
+                    position: absolute;
+                    top: 0;left: 0;}
+     .cnr_1 .cr_1{ width: 320px;
+                   height: 26px;
+                   background: url(img_l/bg_3.jpg) no-repeat 0 -529px;
+                   line-height: 26px;
+                   margin-bottom: 4px;}
+     .cr_1 a{font-size: 14px;
+             color: #a6b2d8;
+             padding-left: 30px;}
+     .cr_1 .cm_1{ padding-left: 140px;}
+     .cr_2{display: none;
+           margin: 10px 0;}
+     .col_r .cr_1{display: none;}
+     .col_r .cr_2{display: block;}
+     
+     .shop .left{width: 216px;
+                 margin:30px 20px 0 0;}
+     .shop .center{width: 426px;
+                   margin:30px 20px 0 0;}
+     .shop .right{width: 326px;
+                  margin-top:30px;}
+     .left_1{ width: 215px;
+              height: 190px;
+              background: url(img_l/bg_3.jpg) no-repeat 0 -554px;}
+     .left_1 h3{font-size: 16px;
+                color: #f39f60;
+                text-align: center;
+                line-height: 44px;}
+     .left_1 ul{width: 166px;
+                margin: 20px auto;}
+     .left_1 ul li a{font-size: 14px;
+                     color:#9587ab;
+                     line-height: 24px;}
+     .left_1 ul li{float: left;}
+     .left_1 .lt_1{margin-left: 36px;}
+     .left_2{margin-top: 22px;}
+     .left_2 p{width: 205px;
+               height: 35px;
+               background: url(img_l/bg_3.jpg) no-repeat -451px -273px;
+               border: 5px solid #322b3c;
+               text-align: center;}
+     .left_2 p a{font-size: 16px;
+                 color: #8c81b7;
+                 line-height: 35px;}
+     .left_3{display: block;
+             width: 215px;
+             height: 268px;
+             background: url(img_l/t_1.jpg) no-repeat 0 0;}
+     .cent_1 h3{font-size: 20px;
+                color: #f4cc91;
+                position: relative;
+                padding:6px 60px;}
+     .cent_1 h3 i{width: 50px;
+                  height: 30px;
+                  background: url(img_l/bg_3.jpg) no-repeat -607px -349px;
+                  position: absolute;
+                  top: 0;left: 0;}
+     .cent_1 .ct_1{width: 315px;
+                   height: 46px;
+                   border-top: 1px solid #433b4f;
+                   border-right: 1px solid #433b4f;
+                   margin-top: 18px;}
+     .ct_1 li{float: left;
+              width: 104px;
+              height: 46px;
+              border-left: 1px solid #433b4f;
+              border-bottom: 1px solid #433b4f;
+              text-align: center;}
+     .ct_1 li a{font-size: 14px;
+                color: #a295b7;
+                line-height: 46px;}
+        /*js*/
+     .ct_1 .ct_btn { border-bottom: 1px solid #322b3c;
+                     background: #322b3c}
+      .ct_btn a{color: #fff;}
+     .cent_1 .ct_2{width: 420px;
+                   height: 256px;
+                   border: 1px solid #433b4f;}
+     .ct_2 img { margin: 22px 0 0 16px;}
+     
+     .ct_2 p a{ font-size: 36px;
+                color:aqua;
+                padding: 20px 0 0 200px;}
+     .ct_2 li {display: none;}
+     .cent_1{position: relative;}
+     .cent_1 .ct_3{position: absolute;
+                   top: 66px;right: 16px;
+                   width: 80px;height: 14px;
+                   background: url(img_l/nex_lt.png) no-repeat;}
+     .cent_1 .ct_3 a{font-size: 12px;
+                     color: #9589a9;
+                     padding-left: 20px;}
+     .cent_2 {margin-top: 30px;}
+     .cent_2 h3{position: relative;}
+     .cent_2 h3 i{width: 45px;
+                  height: 31px;
+                  background: url(img_l/bg_3.jpg) no-repeat -613px -381px;
+                  position: absolute;
+                  top: 0;left: 0;}
+      .right_1 h3{font-size: 20px;
+                  color: #f4cc91;
+                  position: relative;
+                  padding:6px 42px;}
+      .right_1 h3 i{width: 28px;
+                    height: 30px;
+                    background: url(img_l/bg_3.jpg) no-repeat -628px -40px;
+                    position: absolute;
+                    top: 0;left: 0;}
+      .right_1 .rt_ul{width: 320px;
+                      height: 302px;
+                      background: #26212d;
+                      border: 1px solid #4b3f5c;
+                      margin-top: 18px;}
+      .rt_ul li{width: 288px;
+                height: 58px;
+                border-bottom: 1px dashed #4b3f5c;
+                margin: 0 auto;
+                position: relative;
+                line-height: 58px;}
+      .rt_ul .rt_ds{border: none;}
+      .rt_ul li .rt_1{width: 80px;
+                      height: 28px;
+                      background: url(img_l/jt_1.png) no-repeat;
+                      position: absolute;
+                      left: 0;top: 14px;}
+      .rt_ul li .rt_1 a{font-size: 14px;
+                        color: #fff;
+                        position: absolute;
+                        left: 8px;top: -14px;}
+      .rt_ul li .rt_2{width: 90px;
+                      height: 28px;
+                      background: url(img_l/jt_2.png) no-repeat;
+                      position: absolute;
+                      left: 0;top: 14px;}
+      .rt_ul li .rt_2 a{font-size: 14px;
+                        color: #fff;
+                        position: absolute;
+                        left: 6px;top: -14px;}
+      .rt_ul li .rt_3{margin-left: 96px;}
+      .rt_3 a,i{font-size: 14px;
+                color: #9587ab;}
+      .rt_ul .rt_4{width: 280px;
+                   height: 40px;
+                   border: 3px solid #4b3f5c;
+                   margin-top: 6px;
+                   line-height: 40px;
+                   text-align: center;}
+      .rt_ul .rt_4 a{font-size: 22px;
+                     color: #b1a1ca;}
+      .right_2{margin-top: 30px;
+               position: relative;}
+      .right_2 h3{font-size: 20px;
+                  color: #f4cc91;
+                  position: relative;
+                  padding:6px 42px;}
+      .right_2 h3 i{width: 34px;
+                    height: 30px;
+                    background: url(img_l/bg_3.jpg) no-repeat -624px -78px;
+                    position: absolute;
+                    top: 0;left: 0;}
+      .right_2 .rul_1{width: 210px;
+                      height: 46px;
+                      border-top: 1px solid #433b4f;
+                      border-right: 1px solid #433b4f;
+                      margin-top: 18px;}
+      .right_2 .rul_1 li{float: left;
+                         width: 104px;
+                         height: 46px;
+                         border-left: 1px solid #433b4f;
+                         border-bottom: 1px solid #433b4f;
+                         text-align: center;}
+      .right_2 .rul_1 li a {font-size: 14px;
+                            color: #a295b7;
+                            line-height: 46px;}
+      .right_2 .rul_2{width: 320px;
+                      height: 256px;
+                      background: #322b3c;
+                      border: 1px solid #433b4f;}
+      .right_2 .rl_1{position: absolute;
+                     top: 66px;
+                     right: 16px;
+                     width: 80px;
+                     height: 14px;
+                     background: url(img_l/nex_lt.png) no-repeat;}
+      .right_2 .rl_1 a{font-size: 12px;
+                       color: #9589a9;
+                       padding-left: 20px;}
+      .right_2 .rul_2 li{margin: 22px 10px 0px 10px;}
+      
+    </style>
+    
+    <script>
+      window.onload = function(){
+        var oUl = document.getElementById('dlb_btn');
+        var aLi = oUl.getElementsByTagName('a');
+        var oDiv = document.getElementById('dlb_img');
+        var aImg = oDiv.getElementsByTagName('img');
+        
+           for(var i=0;i<aLi.length;i++){
+              aLi[i].a = i;
+              aLi[i].onmouseover = function(){
+                  
+                  for(var j=0;j<aLi.length;j++){
+                      aLi[j].className = '';
+                      aImg[j].style.display = '';
+                  }
+                  this.className = 'active';
+                  aImg[this.a].style.display='block';
+              }
+          }
+          
+          
+        var oBtn = document.getElementById('drb_btn');
+        var aBtn = oBtn.getElementsByTagName('li');
+        var oBox = document.getElementById('drb_box');
+        var aBox = oBox.getElementsByTagName('div');
+          
+          for(var i=0;i<aBtn.length;i++){
+              aBtn[i].abc = i;
+              aBtn[i].onmouseover = function(){
+                  
+                  for(var j=0;j<aBtn.length;j++){
+                      aBtn[j].className = '';
+                      aBox[j].style.display = '';
+                  }
+                  
+                  this.className = 'dbtn';
+                  aBox[this.abc].style.display = 'block';
+                  
+              }
+          }
+          
+        
+        var oCtn = document.getElementById('cnl_btn');
+        var aCtn = oCtn.getElementsByTagName('a');
+        var oCox = document.getElementById('cnl_img');
+        var aCox = oCox.getElementsByTagName('img');
+         
+          
+          for(var i=0;i<aCtn.length;i++){
+              aCtn[i].a = i;
+              aCtn[i].onmouseover = function(){
+                  
+                  for(var i=0;i<aCtn.length;i++){
+                      aCox[i].style.display = '';
+                  }
+                 
+                 aCox[this.a].style.display = 'block'; 
+                  
+              }
+          }
+          
+          
+        var oCol = document.getElementById('col_r');
+        var aCli = oCol.getElementsByTagName('li');
+          
+          for(var i=0;i<aCli.length;i++){
+              
+              aCli[i].onmouseover = function(){
+                  
+                   for(i=0;i<aCli.length;i++){
+                       
+                       aCli[i].className = '';
+                   }
+                  
+                  this.className = 'col_r';
+              }
+          }
+          
+        var oCbn = document.getElementById('ct_btn');
+        var aCbn = oCbn.getElementsByTagName('li');
+        var oCbx = document.getElementById('ct_box');
+        var aCbx = oCbx.getElementsByTagName('li');
+          
+          for(var i=0; i<aCbn.length;i++){
+              aCbn[i].bx = i;
+              aCbn[i].onmouseover = function(){
+                  
+                  for(var j=0;j<aCbn.length;j++){
+                      
+                      aCbn[j].className = '';
+                      aCbx[j].style.display = '';
+                  }
+                  
+                  this.className = 'ct_btn';
+                  aCbx[this.bx].style.display = 'block'; 
+              }
+          }
+        
+        var oCbn2 = document.getElementById('ct_btn2');
+        var aCbn2 = oCbn2.getElementsByTagName('li');
+        var oCbx2 = document.getElementById('ct_box2');
+        var aCbx2 = oCbx2.getElementsByTagName('li');
+          
+          for(var i=0; i<aCbn2.length;i++){
+              aCbn2[i].bx = i;
+              aCbn2[i].onmouseover = function(){
+                  
+                  for(var j=0;j<aCbn.length;j++){
+                      
+                      aCbn2[j].className = '';
+                      aCbx2[j].style.display = '';
+                  }
+                  
+                  this.className = 'ct_btn';
+                  aCbx2[this.bx].style.display = 'block'; 
+              }
+          }
+    
+    
+      }
+    
+    </script>
+    
+    
+        
+</head>
+<body>
+ <div class="nav_box">
+  <div class="nav clearfix">
+      <h1 class="nav_l fl">
+          <a href="#">畅游</a>
+      </h1>
+      <div class="nav_r fr">
+      <ul class="nav_1 fl">
+         <li>
+             <a href="#">
+                 <i></i>
+                 注册
+             </a>
+         </li>
+          <li>
+             <a href="#">
+                 <i class="nv_1"></i>
+                 充值
+             </a>
+         </li>
+          <li>
+             <a href="#">
+                 <i class="nv_2"></i>
+                 畅游+
+             </a>
+         </li>
+      </ul>
+      <ul class="nav_2 fl">
+          <li>
+              <a href="#">
+                  客服
+                  <b></b>
+              </a>
+          </li>
+           <li>
+              <a href="#">
+                  畅游全服务
+                  <b></b>
+              </a>
+          </li>
+           <li>
+              <a href="#">
+                  畅游全游戏
+                  <b></b>
+              </a>
+          </li>
+      </ul>
+    </div>
+ </div>
+</div>  
+  
+ <div class="cont_box">
+    <div class="header clearfix">
+       <h1 class="head_l fl">
+           <a href="#">灵魂回响</a>
+       </h1> 
+       <ul class="head_r fr">
+           <li>
+               <a href="#">
+                   首页<br/>
+                   <span>HOME</span>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   新闻公告<br/>
+                  <span>NEWS</span>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   游戏特色<br/>
+                  <span>FEATURES</span>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   新手指南<br/>
+                  <span>NEWBIE</span>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   游戏下载<br/>
+                   <span>DOWNLODA</span>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   活动专区<br/>
+                   <span>ACTIVITY</span>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   视觉欣赏<br/>
+                   <span>VIDEO & PICTURE</span>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   玩家互动<br/>
+                   <span>INTERACTION</span>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+                   客户服务<br/>
+                   <span>SERVICE</span>
+               </a>
+           </li>
+       </ul>
+       <p class="fl">
+        <a href="#"></a>    
+       </p> 
+     </div>
+    
+    <div class="content">
+      <div class="download clearfix">
+          <div class="download_l fl">
+             <ul class="down_lt clearfix">
+                 <li class="dw_1">
+                     <a href="#"></a>
+                 </li>
+                 <li class="dw_2">
+                     <a href="#"></a>
+                 </li>
+                 <li class="dw_2 dw_3">
+                     <a href="#"></a>
+                 </li>
+                 <li class="dw_2 dw_4">
+                     <a href="#"></a>
+                 </li>
+                 <li class="dw_2 dw_5">
+                     <a href="#"></a>
+                 </li>
+              </ul>
+             <div class="down_lb">
+                 <ul class="clearfix" id="dlb_btn">
+                    <li >
+                        <a href="#" class="active"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                  </ul>
+                 <div id="dlb_img">
+                      <a href="#">
+                          <img src="img_l/4.jpg" style="display:block;"/>
+                      </a>
+                      <a href="#">
+                          <img src="img_l/5.jpg"/>
+                      </a>
+                      <a href="#">
+                          <img src="img_l/4.jpg"/>
+                      </a>
+                      <a href="#">
+                          <img src="img_l/5.jpg"/>
+                      </a>
+                      <a href="#">
+                          <img src="img_l/4.jpg"/>
+                      </a>
+                  </div>
+             </div>  
+          </div>
+          
+          <div class="download_r fr">
+              <div class="down_rt">
+                <div class="do_1">
+                  <div class="do_p">
+                    <p>
+                        <a href="#">
+                            电信一区 <span>【元素殿堂】</span> 欢迎进驻 !
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#">
+                            网通一区 <span>【雷霆之怒】</span> 欢迎进驻 !
+                        </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="do_2">
+                    <p>
+                     距您上次访问有
+                       <a href="#">200</a>
+                     条更新
+                       <i></i>
+                       <span>关注：</span>
+                    </p>
+                    
+                </div>
+              </div>
+              
+              <div class="down_rb">
+                 <ul class="drb_btn clearfix" id="drb_btn" >
+                     <li>
+                         <a href="#">综合</a>
+                     </li>
+                     <li class="dn_1 dbtn">
+                         <a href="#">新闻</a>
+                     </li>
+                     <li class="dn_2">
+                         <a href="#">公告</a>
+                     </li>
+                     <li class="dn_3">
+                         <a href="#">媒体</a>
+                     </li>
+                 </ul>
+                 
+                 <div class="drb_box" id="drb_box">
+                    <div  class="drb_1">
+                        哈哈哈哈哈哈哈哈哈哈哈
+                    </div>
+                    
+                    <div class="drb_1" style="display:block;">
+                        <h3>
+                            <a href="#">
+                                4月8日daban大版开启 新职业术士魔神天降
+                            </a>
+                        </h3>
+                        <ul class="rb_1 clearfix">
+                          <li>
+                           <a href="#">
+                           【新闻】 萌属性大放送！大神手绘同人图大放送 
+                           </a>
+                           <span>03/04</span>
+                          </li>
+                          <li>
+                           <a href="#">
+                           【新闻】 萌属性大放送！大神手绘同人图大放送 
+                           </a>
+                           <span>03/04</span>
+                          </li>
+                          <li>
+                           <a href="#">
+                           【新闻】 萌属性大放送！大神手绘同人图大放送 
+                           </a>
+                           <span>03/04</span>
+                          </li>
+                          <li>
+                           <a href="#">
+                           【新闻】 萌属性大放送！大神手绘同人图大放送 
+                           </a>
+                           <span>03/04</span>
+                          </li>
+                          <li>
+                           <a href="#">
+                           【新闻】 萌属性大放送！大神手绘同人图大放送 
+                           </a>
+                           <span>03/04</span>
+                          </li>
+                          <li>
+                           <a href="#">
+                           【新闻】 萌属性大放送！大神手绘同人图大放送 
+                           </a>
+                           <span>03/04</span>
+                          </li>
+                        </ul>
+                        <p>
+                           <a href="#">更多信息&gt;</a>
+                        </p>
+                      </div>
+                     
+                    <div  class="drb_1">
+                        嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿
+                    </div>
+                    
+                    <div  class="drb_1">
+                       啦啦啦啦啦啦啦啦啦啦啦啦啦
+                    </div> 
+                     
+                 </div>
+               </div>
+          </div>
+      </div>
+       
+      <ul class="banner clearfix">
+         <li>
+             <a href="#">
+                 <img src="img_l/7.jpg"/>
+             </a>
+         </li>
+          <li>
+             <a href="#">
+                 <img src="img_l/9.jpg"/>
+             </a>
+         </li>
+          <li>
+             <a href="#">
+                 <img src="img_l/7.jpg"/>
+             </a>
+         </li>
+          <li>
+             <a href="#">
+                 <img src="img_l/9.jpg"/>
+             </a>
+         </li>
+          
+      </ul> 
+       
+      <div class="column clearfix">
+          <div class="column_l fl">
+             <ul class="cnl_1 clearfix" id="cnl_btn">
+                 <li>
+                     <a href="#" class="cnl_btn"></a>
+                 </li>
+                 <li>
+                     <a href="#" class="cl_1"></a>
+                 </li>
+                 <li>
+                     <a href="#" class="cl_2"></a>
+                 </li>
+                 <li>
+                     <a href="#" class="cl_3"></a>
+                 </li>
+                 <li>
+                     <a href="#" class="cl_4"></a>
+                 </li>
+                 <li>
+                     <a href="#" class="cl_5"></a>
+                 </li>
+             </ul>
+             
+             <div class="cnl_2" id="cnl_img">
+                 <a href="#">
+                     <img src="img_l/ck_1.jpg" style = "display:block;"/>
+                 </a>
+                 <a href="#">
+                     <img src="img_l/ck_2.jpg"/>
+                 </a>
+                 <a href="#">
+                     <img src="img_l/ck_1.jpg"/>
+                 </a>
+                 <a href="#">
+                     <img src="img_l/ck_2.jpg"/>
+                 </a>
+                 <a href="#">
+                     <img src="img_l/ck_1.jpg"/>
+                 </a>
+                 <a href="#">
+                     <img src="img_l/ck_2.jpg"/>
+                 </a>
+             </div>
+           </div>
+          
+          <div class="column_r fr">
+             <h3>
+                 <i></i>
+                 活动中心
+             </h3>
+             
+             <ul class="cnr_1" id="col_r">
+                 <li class="col_r">
+                     <div class="cr_1">
+                         <a href="#">神偷者的成长礼</a>
+                         <a href="#" class="cm_1">进行中</a>
+                     </div>
+                     
+                     <div class="cr_2">
+                         <a href="#">
+                             <img src="img_l/1.jpg"/>
+                         </a>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="cr_1">
+                         <a href="#">神偷者的成长礼</a>
+                         <a href="#" class="cm_1">进行中</a>
+                     </div>
+                     
+                     <div class="cr_2">
+                         <a href="#">
+                             <img src="img_l/1.jpg"/>
+                         </a>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="cr_1">
+                         <a href="#">神偷者的成长礼</a>
+                         <a href="#" class="cm_1">进行中</a>
+                     </div>
+                     
+                     <div class="cr_2">
+                         <a href="#">
+                             <img src="img_l/1.jpg"/>
+                         </a>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="cr_1">
+                         <a href="#">神偷者的成长礼</a>
+                         <a href="#" class="cm_1">进行中</a>
+                     </div>
+                     
+                     <div class="cr_2">
+                         <a href="#">
+                             <img src="img_l/1.jpg"/>
+                         </a>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="cr_1">
+                         <a href="#">神偷者的成长礼</a>
+                         <a href="#" class="cm_1">进行中</a>
+                     </div>
+                     
+                     <div class="cr_2">
+                         <a href="#">
+                             <img src="img_l/1.jpg"/>
+                         </a>
+                     </div>
+                  </li>
+                   <li>
+                     <div class="cr_1">
+                         <a href="#">神偷者的成长礼</a>
+                         <a href="#" class="cm_1">进行中</a>
+                     </div>
+                     
+                     <div class="cr_2">
+                         <a href="#">
+                             <img src="img_l/1.jpg"/>
+                         </a>
+                     </div>
+                  </li>
+                  
+             </ul>
+          </div>
+      </div> 
+      
+      <div class="shop clearfix">
+          
+          <div class="left fl">
+             <div class="left_1">
+                <h3>快捷入口</h3>
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">账号管理</a>
+                    </li>
+                    <li  class="lt_1">
+                        <a href="#">兑换中心</a>
+                    </li>
+                    <li>
+                        <a href="#">账号安全</a>
+                    </li>
+                    <li  class="lt_1">
+                        <a href="#">畅游知道</a>
+                    </li>
+                    <li>
+                        <a href="#">BUG提交</a>
+                    </li>
+                    <li  class="lt_1">
+                        <a href="#">客户端FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">玩家社区</a>
+                    </li>
+                    <li  class="lt_1">
+                        <a href="#">加速器下载</a>
+                    </li>
+                </ul>
+             </div>
+             
+             <div class="left_2">
+                 <a href="#">
+                     <img src="img_l/8.jpg"/>
+                 </a>
+                 <p>
+                     <a href="#">媒体合作专区</a>
+                 </p>
+             </div>  
+             
+             <a href="#" class="left_3"></a>
+           </div>
+          
+          <div class="center fl">
+             
+             <div class="cent_1">
+                 <h3>
+                     <i></i>
+                     玩家交流
+                 </h3>
+                 
+                 <ul class="ct_1 clearfix" id="ct_btn">
+                     <li class="ct_btn">
+                         <a href="#">玩家攻略</a>
+                     </li>
+                     <li>
+                         <a href="#">论坛热帖</a>
+                     </li>
+                     <li>
+                         <a href="#">社区精华</a>
+                     </li>
+                  </ul>
+                  
+                  <ul class="ct_2" id="ct_box">
+                      <li style="display:block;">
+                          <a>
+                              <img src="img_l/3.jpg"/>
+                          </a>
+                          <p>
+                              <a href="#">1</a>
+                          </p>
+                      </li>
+                      <li>
+                          <a>
+                              <img src="img_l/3.jpg"/>
+                          </a>
+                          <p>
+                              <a href="#">2</a>
+                          </p>
+                      </li>
+                      <li>
+                          <a>
+                              <img src="img_l/3.jpg"/>
+                          </a>
+                          <p>
+                              <a href="#">3</a>
+                          </p>
+                      </li>
+                  </ul>
+                  
+                  <p class="ct_3">
+                      <a href="#">更多信息&gt;</a>
+                  </p>
+                 
+                 
+             </div>
+              
+             <div class="cent_1 cent_2">
+                 <h3>
+                     <i></i>
+                     媒体专区
+                 </h3>
+                 
+                 <ul class="ct_1 clearfix" id="ct_btn2">
+                     <li class="ct_btn">
+                         <a href="#">玩家攻略</a>
+                     </li>
+                     <li>
+                         <a href="#">论坛热帖</a>
+                     </li>
+                     <li>
+                         <a href="#">社区精华</a>
+                     </li>
+                  </ul>
+                  
+                  <ul class="ct_2" id="ct_box2">
+                      <li style="display:block;">
+                          <a>
+                              <img src="img_l/3.jpg"/>
+                          </a>
+                          <p>
+                              <a href="#">1</a>
+                          </p>
+                      </li>
+                      <li>
+                          <a>
+                              <img src="img_l/3.jpg"/>
+                          </a>
+                          <p>
+                              <a href="#">2</a>
+                          </p>
+                      </li>
+                      <li>
+                          <a>
+                              <img src="img_l/3.jpg"/>
+                          </a>
+                          <p>
+                              <a href="#">3</a>
+                          </p>
+                      </li>
+                  </ul>
+                  
+                  <p class="ct_3">
+                      <a href="#">更多信息&gt;</a>
+                  </p>
+                 
+                 
+             </div>
+             
+          </div>
+          
+          <div class="right fr">
+             <div class="right_1">
+                 <h3>
+                     <i></i>
+                     游戏资料
+                 </h3>
+                 <ul class="rt_ul">
+                     <li class="clearfix">
+                         <p class="rt_1 fl">
+                             <a href="javascript:;">新手入门</a>
+                         </p>
+                         <p class="rt_3 fl">
+                             <a href="javascript:;">注册账号</a>
+                             <i>|</i>
+                             <a href="javascript:;">下载游戏</a>
+                             <i>|</i>
+                             <a href="javascript:;">登录游戏</a>
+                         </p>
+                     </li>
+                     <li class="clearfix">
+                         <p class="rt_1 fl">
+                             <a href="javascript:;">职业介绍</a>
+                         </p>
+                         <p class="rt_3 fl">
+                             <a href="javascript:;">刺客</a>
+                             <i>|</i>
+                             <a href="javascript:;">神射手</a>
+                             <i>|</i>
+                             <a href="javascript:;">魔法师</a>
+                             <i>|</i>
+                             <a href="javascript:;">守护者</a>
+                         </p>
+                     </li>
+                     <li class="clearfix">
+                        <p class="rt_2 fl">
+                             <a href="javascript:;" >旅行者日记</a>
+                         </p>
+                         <p class="rt_3 fl">
+                             <a href="javascript:;">雷班斯</a>
+                             <i>|</i>
+                             <a href="javascript:;">弗尔图斯</a>
+                             <i>|</i>
+                             <a href="javascript:;">赫里亚纳</a>
+                         </p>
+                     </li>
+                     <li class="rt_ds clearfix">
+                         <p class="rt_2 fl">
+                             <a href="javascript:;" >神谕者指引</a>
+                         </p>
+                         <p class="rt_3 fl">
+                             <a href="javascript:;">1-19级</a>
+                             <i>|</i>
+                             <a href="javascript:;">20-39级</a>
+                             <i>|</i>
+                             <a href="javascript:;">40-49级</a>
+                         </p>
+                     </li>
+                     <li class="rt_4 rt_ds">
+                         <a href="javascript:;">进入资料站</a>
+                     </li>
+                  </ul>
+                 
+             </div>
+             
+             <div class="right_2">
+                 <h3>
+                     <i></i>
+                     视觉欣赏
+                 </h3>
+                 
+                 <ul class="rul_1 clearfix ct_1">
+                     <li class="ct_btn">
+                         <a href="#">游戏视频</a>
+                     </li>
+                     <li>
+                         <a href="#">游戏截图</a>
+                     </li>
+                  </ul>
+                  
+                  <ul class="rul_2 clearfix" >
+                     <li class="fl">
+                         <a href="javascript:;">
+                             <img src="img_l/2.jpg"/>
+                         </a>
+                     </li>
+                     <li class="fl">
+                         <a href="javascript:;">
+                             <img src="img_l/2.jpg"/>
+                         </a>
+                     </li>
+                     <li class="fl">
+                         <a href="javascript:;">
+                             <img src="img_l/2.jpg"/>
+                         </a>
+                     </li>
+                     <li class="fl">
+                         <a href="javascript:;">
+                             <img src="img_l/2.jpg"/>
+                         </a>
+                     </li>
+                  </ul>
+                  
+                  <p class="rl_1">
+                      <a href="#">更多信息&gt;</a>
+                  </p>
+             </div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+      </div>  
+       
+      <div class="footer">
+         <img src="img_l/footer.jpg"/>
+     </div>
+
+        
+        
+        
+    </div>
+     
+      
+</div>
+      
+ 
+       
+</body>
+</html>
