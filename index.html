@@ -2,80 +2,61 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>无标题文档</title>
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<title>智能社— http://www.zhinengshe.com</title>
 <style>
-	body{ background:black;}
-	div{ width:105px; height:100px; float:left; margin:10px; background:black; border-radius:50%; transition:1s all ease; border:3px solid white; box-shadow:0px 0px 40px #ccc; position:relative;}
-	div:hover{   transform:rotate(360deg) skew(10deg,20deg) scale(0.1);}
-	li{ width:70px; height:70px; background:black; border:2px solid white; box-shadow:0px 0px 20px #ccc; border-radius:50%; list-style:none; margin-left:10px; transition:1s all ease;}
-	li:hover{   transform:rotate(360deg) skew(10deg,20deg) scale(0.1);}
-	span{width:50px; height:50px; background:black; border:1px solid white; box-shadow:0px 0px 20px #ccc; border-radius:50%; list-style:none; display:block; margin-left:20px;transition:1s all ease; }
-	span:hover{   transform:rotate(360deg) skew(10deg,20deg) scale(0.1);}
-
+*{margin:0; padding:0;}
+.box{width:400px; height:300px; border:1px solid #000;  position:absolute; top:50%; left:50%; margin-left:-200px; margin-top:-150px; text-align:center; line-height:300px; font-size:30px; display:none;}
 </style>
 <script>
-	window.onload=function(){
-		var aDiv=document.getElementsByTagName('div');
-		var arr=[10,11,12,13,16,17,18,19,30,31,32,33,36,37,38,39];	
-		for(var i=0;i<arr.length;i++){
-			aDiv[arr[i]].style.boxShadow='0px 0px 0px #ccc';
-		}
+window.onload=function(){
+	var oBox = document.querySelector('.box');
+	oBox.ondragenter = function(){
+		oBox.innerHTML = '释放鼠标';
 	};
+	oBox.ondragleave = function(){
+		oBox.innerHTML = '请将文件拖放到此处';
+	};
+	oBox.ondragover = function(){
+		return false;
+	};
+	
+	oBox.ondrop = function(){
+		alert('放下啦');
+		return false;
+	};
+	
+	var timer = null;
+	document.ondragover=function(){
+		oBox.style.display='block';
+		clearTimeout(timer);
+		timer = setTimeout(function(){
+			oBox.style.display='none';
+		},300);
+	};
+	
+	/*document.ondragenter=function(){
+		oBox.style.display='block';
+	};
+	document.ondragleave=function(){
+		oBox.style.display='none';
+	};*/
+};
 </script>
 </head>
 
 <body>
-
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-<div><li><span></span></li></div>
-
+<div class="box">请将文件拖放到此处</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
